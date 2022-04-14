@@ -34,7 +34,7 @@ app.get("/report", async (req, res) => {
   // loop through the trips and store the orginalRouteId id in a object
     trips.data.data.forEach(trip => {
         console.log(trip.attributes.originalRouteId)
-        if(trip.attributes.originalRouteId!=null){
+        if(trip.attributes.originalRouteId!=null&&trip.attributes.originalRouteId!=undefined){
             if(totaltrips[trip.attributes.originalRouteId]==undefined){
                 totaltrips[trip.attributes.originalRouteId]=1
             }
